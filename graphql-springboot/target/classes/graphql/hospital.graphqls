@@ -1,0 +1,38 @@
+extend type Query {
+    patientById(id: ID!): Patient
+    prescriptionById(id: ID!): Prescription
+}
+
+type Patient {
+    id: ID!
+    name: String!
+    age: Int!
+    appointments: [Appointment!]!
+}
+
+type Appointment {
+    id: ID!
+    visitDate: String!
+    reason: String!
+    doctor: Doctor!
+}
+
+type Doctor {
+    id: ID!
+    name: String!
+    specialization: String!
+}
+
+type Prescription {
+    id: ID!
+    issuedDate: String!
+    patient: Patient!
+    doctor: Doctor!
+    medicines: [Medicine!]!
+}
+
+type Medicine {
+    id: ID!
+    name: String!
+    dosage: String!
+}
