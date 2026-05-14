@@ -446,6 +446,10 @@ Postman body:
 }
 ```
 
+**Modular GraphQL Schema Design**: Schema organized across multiple `.graphqls` files (`employee.graphqls`, `book.graphqls`, `hospital.graphqls`) using **`extend` keyword** for **modular architecture, reusability, and maintainability**.
+
+**Domain-Driven Schema Separation**: Each business domain (Employee, Book, Hospital) maintains its own schema file, resolvers, and services for clean separation of concerns.
+
 ## Project flow
 
 - Main GraphQL app: `https://github.com/venkatram1999/graphql-springboot`
